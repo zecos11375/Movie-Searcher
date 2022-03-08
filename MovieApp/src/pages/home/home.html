@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Movie Finder!</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Find your Movies!</h2>
+    <ion-item>
+      <ion-label postion="stacked">Movie Title:</ion-label>
+    <ion-input placeholder="" [(ngModel)]="title"></ion-input>
+  </ion-item>
+  <button ion-button (click)="showMovie(title)" full>search</button>
+
+  <div *ngIf='movie$ | async as mv'>
+        <ion-card>
+            		<ion-card-content>
+
+          <ion-card-title><h2><b>{{mv.data.MovieTitle}}:</b></h2></ion-card-title>
+          <h3><b>Director</b>: {{mv.data.DirectorName}}</h3>
+  		    <br><h3><b>Actors</b>: {{mv.data.Actors}}|</h3>
+      	  <br><h3><b>Duration</b>: {{mv.data.Duration}}</h3>
+  			  <br><h3><b>Genres</b>: {{mv.data.Genres}}</h3>
+      	  <br><h3><b>Language</b>: {{mv.data.Language}}</h3>
+      	  <br><h3><b>Country</b>: {{mv.data.Country}}</h3>
+      	  <br><h3><b>Year</b>: {{mv.data.Year}}</h3>
+      	  <br><h3><b>IMDB Score</b>: {{mv.data.IMDBScore}}</h3>
+      	  <br><h3><b>Number of Reviews</b>: {{mv.data.NumberOfReviews}}</h3>
+          <br><h3><b>IMDB Link</b>:<br><a>{{mv.data.IMDBLink}}</a></h3>
+  </ion-card-content>
+  </ion-card>
+  </div>
+</ion-content>

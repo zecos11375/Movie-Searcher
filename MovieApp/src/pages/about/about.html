@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Director Profile!
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Find Your Director!</h3>
+    <ion-item>
+    <ion-label postion="stacked">Name:</ion-label>
+    <ion-input placeholder="" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <button ion-button (click)="showProfile(name)" full>search</button>
+
+  <div *ngIf='name$ | async as na'>
+        <ion-card>
+          <ion-card-header>
+          <ion-card-title>
+            <h2><b>Average IMDB Score: {{na.data.meanScore}}</b></h2>
+          </ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <h1>Movie List:</h1>
+          </ion-card-content>
+
+          <ion-card-content *ngFor="let item of na.data.movie">
+            <h3>{{item}}</h3>
+          </ion-card-content>
+        </ion-card>
+  </div>
+
+</ion-content>

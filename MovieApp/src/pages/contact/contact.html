@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Insert menu
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+   <div>
+        <ion-card>
+            		<ion-card-content>
+
+          <ion-card-title><h3><b>Insert New Movie:</b></h3></ion-card-title>
+              <ion-item>
+                <ion-label postion="stacked">Title:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="title"></ion-input>
+              </ion-item>
+                  <ion-item>
+                <ion-label postion="stacked">Director:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="dir"></ion-input>
+              </ion-item>
+                             <ion-item>
+                <ion-label postion="stacked">Duration:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="dur"></ion-input>
+              </ion-item>
+                             <ion-item>
+                <ion-label postion="stacked">Actor1:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="act1"></ion-input>
+              </ion-item>
+                             <ion-item>
+                <ion-label postion="stacked">Actor2:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="act2"></ion-input>
+              </ion-item>
+                             <ion-item>
+                <ion-label postion="stacked">Actor3:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="act3"></ion-input>
+              </ion-item>
+                             <ion-item>
+                <ion-label postion="stacked">Genres:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="gen"></ion-input>
+              </ion-item>
+                             <ion-item>
+                <ion-label postion="stacked">Language:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="lang"></ion-input>
+              </ion-item>
+                                               <ion-item>
+                <ion-label postion="stacked">Country:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="coun"></ion-input>
+              </ion-item>
+                                               <ion-item>
+                <ion-label postion="stacked">Year:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="year"></ion-input>
+              </ion-item>
+                                               <ion-item>
+                <ion-label postion="stacked">IMDB Score:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="score"></ion-input>
+              </ion-item>
+                                               <ion-item>
+                <ion-label postion="stacked">Review No.:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="rev"></ion-input>
+              </ion-item>
+                                               <ion-item>
+                <ion-label postion="stacked">IMDB Link:</ion-label>
+                <ion-input placeholder="" [(ngModel)]="link"></ion-input>
+              </ion-item>
+        <button ion-button (click)="insertMovie(title,dir,dur,act1,act2,act3,
+                       gen,lang,coun,year,score,rev,link)" full>insert</button>
+
+  </ion-card-content>
+  </ion-card>
+  </div>
+
+</ion-content>
